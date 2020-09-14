@@ -1,5 +1,16 @@
+
 def find_min_in_nested_arrays(src)
-  # src will be an array of arrays of integers
-  # Produce a new Array that contains the smallest number of each of the nested arrays
+
+  newArr = []
+  i = 0 
+  
+    while  i < src.count do
+      sorted = src[i].sort
+      newArr << sorted[0]
+      i+=1
+    end
+    
+return newArr
+
 
 end
