@@ -4,13 +4,16 @@ def find_min_in_nested_arrays(src)
   mins=[]
   row=0 
   while src.length > row do
-    src[row].sort!
-    mins << src[row][0]
+    column=1
+    min_num= src[row][0]
+   while src[row].length > column do
+      if src[row][column] < min_num
+        min_num= src[row][column]
+      end 
+      column+=1
+    end
+    mins << min_num
     row+=1
-   # while src[row].length > column do
-    #  src[row]
-    #end
-    
   end
 return mins
 end
